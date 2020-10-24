@@ -1,0 +1,33 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>How much do you know about feminism?</h1>
+    <div>
+    <form action="/grade/" method="post"> {% csrf_token %}
+        {% for i in quiz %}
+            <table>
+                <tr>
+                    <td class="text" name> <strong>{{ i.id }} ) {{ i.question }}?</strong> </td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="{{ i.id }}" id="{{ i.option1 }}"
+                               value="Option1">{{ i.option1 }}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="{{ i.id }}" id="{{ i.option2 }}"
+                               value="Option2">{{ i.option2 }}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="{{ i.id }}" id="{{ i.option3 }}"
+                               value="Option3">{{ i.option3 }}</td>
+                </tr>
+            </table> <br>
+        {% endfor %}
+    <input type="submit" name="Submit"/>
+    </form>
+
+
+    </div>
+{% endblock content %}
+
