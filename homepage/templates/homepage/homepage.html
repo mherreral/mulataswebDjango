@@ -1,0 +1,21 @@
+{%  extends 'homepage/base.html' %}
+{% load static %}
+
+{% block content %}
+        <h1>Mulata's web</h1>
+    <ul>
+        {% for item in items %}
+            <li><strong> {{ item.org_name }} :</strong> {{ item.link }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="/addItem/" method="post"> {% csrf_token %}
+        <p>Organization link</p>
+        <input type="text" name="link"/> <br>
+        <p>Organization name</p>
+        <input type="text" name="org_name"/>
+        <input type="submit" name="Add"/>
+    </form>
+
+    <a href="/test/" class="button">the test!</a>
+{% endblock %}

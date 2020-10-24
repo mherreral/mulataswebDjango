@@ -1,0 +1,21 @@
+body {
+  background-color: #9E48F4;
+}
+
+h1 {
+  color: Black;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+}
+
+p{
+  font-size: 20px;
+}
+
+a{
+  text-align: center;
+  color: Black;
+}
+
+

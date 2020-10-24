@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/fem.css' %}">
+
+    {% if title %}
+        <title>Mulata's Web - {{ title }}</title>
+    {% else %}
+        <title>Mulata's Web</title>
+    {% endif %}
+</head>
+<body>
+
+<table width="500" cellpadding="5" align="center">
+
+    <tr>
+        <td align="center" valign="center">
+            <img src="{% static 'homepage/allw.jpg' %}" alt="firstim" width="300" height="300"/>
+        </td>
+
+        <td align="center" valign="center">
+            <img src="{% static 'homepage/oth.jpg' %}" alt="secim" width="300" height="300"/>
+        </td>
+
+        <td align="center" valign="center">
+            <img src="{% static 'homepage/feminis.jpg' %}" alt="thima" width="300" height="300"/>
+        </td>
+    </tr>
+
+</table>
+{% block content %}{% endblock %}
+</body>
+</html>
